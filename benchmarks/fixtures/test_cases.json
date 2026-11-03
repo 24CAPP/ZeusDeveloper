@@ -1,0 +1,48 @@
+{
+  "test_cases": [
+    {
+      "id": "rate_limiter",
+      "name": "Sliding Window Rate Limiter",
+      "category": "surgical_minimality",
+      "baseline_loc": 142,
+      "baseline_deps": 2,
+      "zeus_loc": 16,
+      "zeus_deps": 0,
+      "description": "In-memory rate limiter without third-party Redis middleware."
+    },
+    {
+      "id": "jwt_expiry_and_replay",
+      "name": "JWT Boundary Validation & Replay Defense",
+      "category": "security_aegis",
+      "attack_class": "Access Control & Tokens",
+      "trust_boundary": "HTTP Bearer Header -> Internal Session",
+      "baseline_flaws": ["Unchecked 'none' alg", "Date.now() without leeway", "Missing token replay cache"],
+      "zeus_remedy_lines": 18,
+      "verified_secure": true
+    },
+    {
+      "id": "ssrf_url_validator",
+      "name": "Webhook SSRF IP Whitelisting",
+      "category": "security_aegis",
+      "attack_class": "SSRF & Dangerous Sinks",
+      "trust_boundary": "User URL input -> Outbound HTTP Fetch",
+      "baseline_flaws": ["DNS rebinding vulnerability", "Loopback IPv4/IPv6 bypass", "Cloud metadata endpoint accessible"],
+      "zeus_remedy_lines": 22,
+      "verified_secure": true
+    },
+    {
+      "id": "oracle_verbosity_react",
+      "name": "React Unnecessary Re-render Explanation",
+      "category": "verbal_discipline",
+      "baseline_response": "Sure! I'd be happy to help with this issue. The reason your React component is re-rendering on every state update even though you feel the props haven't changed is because you're creating a new object literal directly in your JSX. In JavaScript, objects are compared by reference, not value. So React's shallow comparison determines that the prop is new every time. To resolve this, you should use the useMemo hook or move the object outside the component. I hope this helps you out!",
+      "zeus_oracle_response": "New object reference created inline on each render. Wrap object in `useMemo` or hoist outside component."
+    },
+    {
+      "id": "oracle_verbosity_postgres",
+      "name": "PostgreSQL Concurrency Counter Race",
+      "category": "verbal_discipline",
+      "baseline_response": "Hello! That's a great question. When you have concurrent API requests trying to read and then update a counter column in PostgreSQL, you run into what is known as a Time-of-Check to Time-of-Use or check-then-act race condition. Both queries read the counter as 5, then both write 6 instead of 7. The best practice to solve this concurrency race is to update the counter in a single atomic SQL statement or use SELECT FOR UPDATE.",
+      "zeus_oracle_response": "Check-then-act concurrency race. Execute atomic increment: `UPDATE counters SET val = val + 1 WHERE id = $1`."
+    }
+  ]
+}

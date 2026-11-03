@@ -1,0 +1,38 @@
+{
+  "name": "@zeusdeveloper/zeus",
+  "version": "1.1.0",
+  "description": "Sovereign principal engineer mode for AI coding agents. Surgical diffs, Aegis-grade security, token-optimized verbal discipline, and unshakeable correctness.",
+  "keywords": [
+    "ai-skills",
+    "agent-skill",
+    "zeus",
+    "security-audit",
+    "aegis-security",
+    "oracle-terse",
+    "clean-architecture",
+    "yagni",
+    "antigravity",
+    "claude-plugin",
+    "cursor",
+    "opencode"
+  ],
+  "license": "MIT",
+  "author": "Luca Quagliozzi (https://github.com/24Capp)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/24Capp/ZeusDeveloper.git"
+  },
+  "scripts": {
+    "bench": "python benchmarks/runner.py"
+  },
+  "files": [
+    "AGENTS.md",
+    "ZEUS.md",
+    "skills/",
+    ".agents/",
+    ".cursor/",
+    "LICENSE",
+    "README.md",
+    "INSTALL.md"
+  ]
+}

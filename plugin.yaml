@@ -1,0 +1,21 @@
+name: zeus-developer
+version: 1.1.0
+description: Sovereign principal engineer mode. Lightning strikes, Aegis-grade security, token-optimized verbal discipline, native-first architecture.
+author: Luca Quagliozzi (24Capp)
+provides_commands:
+  - zeus
+  - zeus-strike
+  - zeus-shield
+  - zeus-audit
+  - zeus-verify
+  - zeus-debt
+  - zeus-help
+provides_skills:
+  - zeus
+  - zeus-strike
+  - zeus-shield
+  - zeus-audit
+  - zeus-verify
+  - zeus-debt
+  - zeus-help
+

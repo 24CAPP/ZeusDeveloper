@@ -1,0 +1,21 @@
+{
+  "name": "zeus-developer",
+  "interface": {
+    "displayName": "ZeusDeveloper"
+  },
+  "plugins": [
+    {
+      "name": "zeus-developer",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/24Capp/ZeusDeveloper.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+---
+description: ZeusDeveloper Sovereign Engineering Rules for Cursor
+globs: *
+alwaysApply: true
+---
+# ZeusDeveloper Guidelines
+
+- Smallest robust diff: solve the requirement with minimal edits, zero speculative abstractions, and stdlib first.
+- Secure trust boundaries: validate external inputs, propagate errors, and prevent race conditions.
+- Direct answers: state the finding and diff first, cutting conversational filler and pleasantries.
+- Deterministic verification: non-trivial logic must include a focused unit or boundary test.
+- Debrief protocol: end replies with (1) Omissions / Scope Guard, (2) Operational Edge risks.
