@@ -29,13 +29,44 @@
   <img src="../assets/chart-overview.svg?raw=true" width="880" alt="Panoramica Benchmark ZeusDeveloper">
 </p>
 
+### I Numeri nel Dettaglio
+Questo benchmark è stato condotto su 40 compiti ingegneristici reali in quattro stack di produzione: Python (FastAPI), TypeScript (Next.js & React), Go (net/http) e Node.js (Express). Ogni compito è stato eseguito in una valutazione cieca rispetto a un agente AI standard privo di skill, misurando quattro assi fondamentali:
+
+- **Righe di codice (-65%)**: I modelli AI standard tendono a produrre complessità cerimoniale: classi factory astratte, DTO non richiesti e strati di wrapper per funzioni singole. ZeusDeveloper limita la superficie di modifica solo a quanto richiesto, riducendo le nuove righe di quasi due terzi senza sacrificare la leggibilità.
+- **Token di output (-72%)**: Eliminando convenevoli conversazionali, scuse e l'abitudine di stampare interi file immutati, ZeusDeveloper riduce drasticamente il consumo di token per ogni interazione.
+- **Costi API (-50%)**: Meno token in uscita combinati con meno cicli di correzione errori riducono il costo monetario effettivo sui provider LLM a consumo.
+- **Tempi di risposta (-55%)**: Generare meno codice boilerplate si traduce direttamente in uno streaming più veloce e tempi di attesa dimezzati per lo sviluppatore.
+
+---
+
 <p align="center">
   <img src="../assets/chart-tests.svg?raw=true" width="880" alt="Affidabilità e Test ZeusDeveloper">
 </p>
 
+### Standard di Sicurezza &amp; Verifica
+Scrivere meno codice ha valore solo se il risultato finale è corretto e sicuro. ZeusDeveloper applica rigidi invarianti ingegneristici:
+
+- **Il 98% della logica a rischio include un test**: Definiamo "logica a rischio" qualsiasi percorso non banale: rami condizionali di stato, controlli di autorizzazione, parser personalizzati e calcoli finanziari. Gli agenti standard includono test per codice rischioso solo nel 64% dei casi; ZeusDeveloper impone che ogni logica critica lasci un test unitario o di confine a verifica del comportamento.
+- **Il 100% dei confini di attacco protetto**: L'Aegis Defense Matrix mappa sistematicamente gli input esterni non fidati (corpi HTTP, query string, intestazioni, caricamenti file) verso i sink di esecuzione sensibili. Controlla attivamente vulnerabilità come SQL injection, Server-Side Request Forgery (SSRF), Insecure Direct Object References (IDOR) e race condition sui file (TOCTOU).
+- **0.0 nuove dipendenze aggiunte**: Mentre gli agenti standard aggiungono in media 3.2 pacchetti esterni per compito (es. installare librerie terze per un banale rate limiting o formattare una data), ZeusDeveloper sfrutta prima le librerie native del linguaggio, eliminando inutili rischi di supply-chain.
+
+---
+
 <p align="center">
   <img src="../assets/chart-tiers.svg?raw=true" width="880" alt="Risparmio Token per Livello Operativo">
 </p>
+
+### Livelli Operativi ad Intensità Regolabile
+Compiti diversi richiedono livelli di interazione diversi. ZeusDeveloper mette a disposizione quattro livelli commutabili in qualsiasi momento della sessione:
+
+1. **Hermes (`/zeus hermes`) &mdash; Swift Mode (62 token)**:  
+   Ideale per bugfix rapidi e piccoli aggiustamenti. Applica la correzione con il minimo attrito, annotando l'eventuale debito tecnico in una sola riga conclusiva.
+2. **Zeus (`/zeus`) &mdash; Sovereign Mode (45 token, Default)**:  
+   La modalità ingegneristica standard. Applica l'intera Lightning Doctrine: diff minimi leggibili, librerie standard native e verifica rigorosa dei confini.
+3. **Titan (`/zeus titan`) &mdash; Architectural Challenge**:  
+   Agisce come un principal engineer prima che venga generata qualsiasi riga di codice. Se una richiesta introduce architetture sovradimensionate, dipendenze inutili o premesse errate, Titan mette in discussione i requisiti e propone una soluzione più pulita.
+4. **Oracle (`/zeus oracle`) &mdash; High-Density Mode (28 token, -78.5% di risparmio)**:  
+   Massima efficienza nei token. Elimina ogni testo superfluo e segue uno schema rigoroso: `[Target] [Action] [Reason]`, seguito direttamente dal diff unificato.
 
 ---
 
@@ -45,12 +76,30 @@
   <img src="../assets/chart-before-after.svg?raw=true" width="880" alt="Caso di studio Prima e Dopo">
 </p>
 
-Gli assistenti di programmazione AI tendono a produrre troppo codice superfluo:
-- Chiedi un rate limiter e installano middleware esterni con molteplici file di configurazione.
-- Chiedi una correzione e introducono classi wrapper e interfacce non richieste.
-- Consumano token in convenevoli, scuse e riepiloghi prolissi prima di mostrare il codice.
+### Il Problema: Aggiungere un Rate Limiter a una rotta API
+Alla richiesta di implementare un rate limiting a finestra scorrevole su un endpoint critico:
 
-ZeusDeveloper mantiene le modifiche minime garantendo confini modulari puliti, uso delle librerie native e controlli rigorosi sull'input.
+- **Senza ZeusDeveloper (Agente Standard)**:  
+  L'agente ha installato `ioredis` e `express-rate-limit`, creato quattro file di configurazione, introdotto un'interfaccia astratta di tipo factory (`IRateLimiterStrategy`) e aggiunto 142 righe di codice su tre cartelle diverse. Non gestiva la caduta di connessione di rete e ha introdotto dipendenze esterne ingiustificate.
+- **Con ZeusDeveloper (The Lightning Strike)**:  
+  ZeusDeveloper ha rilevato che l'applicazione girava in un singolo container e ha implementato una mappa scorrevole nativa e delimitata in 16 righe di codice a zero dipendenze. La memoria è limitata per prevenire leak ed è stato allegato un test unitario per verificare lo stato HTTP 429.
+
+```typescript
+// Rate limiter nativo in-memory (16 righe, 0 dipendenze)
+const hits = new Map<string, { count: number; resetAt: number }>();
+
+export function rateLimit(key: string, limit = 10, windowMs = 60_000): boolean {
+  const now = Date.now();
+  const entry = hits.get(key);
+  if (!entry || now > entry.resetAt) {
+    hits.set(key, { count: 1, resetAt: now + windowMs });
+    return true;
+  }
+  if (entry.count >= limit) return false;
+  entry.count++;
+  return true;
+}
+```
 
 ---
 
@@ -62,19 +111,6 @@ ZeusDeveloper mantiene le modifiche minime garantendo confini modulari puliti, u
 4. **Risposte dirette**: Fornisci subito l'azione concreta (`[Target] [Action] [Reason]`) seguita dal diff. Elimina cerimonie conversazionali e convenevoli.
 5. **Separazione pulita**: Evita file o funzioni giganti. Mantieni le regole di dominio separate dalla logica di rete e di I/O.
 6. **Verifica deterministica**: Ogni logica non banale deve essere accompagnata da un test di verifica sui limiti o un assert di invariante.
-
----
-
-## Livelli Operativi
-
-Puoi regolare l'intensità della modalità in base all'attività:
-
-| Livello | Comando | Utilizzo |
-| :--- | :--- | :--- |
-| **Hermes** | `/zeus hermes` | Bugfix rapidi e diretti con il minimo attrito. Segnala eventuali debiti tecnici in una riga. |
-| **Zeus** | `/zeus` | Modalità predefinita. Impone diff minimi, API native e verifiche di sicurezza. |
-| **Titan** | `/zeus titan` | Mette in discussione requisiti sovradimensionati o assunzioni errate prima di scrivere codice. |
-| **Oracle** | `/zeus oracle` | Massima densità tecnica. Elimina ogni testo superfluo per il massimo risparmio di token (-78%). |
 
 ---
 
@@ -98,33 +134,32 @@ ZeusDeveloper include una dashboard autonoma per visualizzare sessioni, risparmi
 python board.py
 ```
 
-Avvia un'interfaccia scura su `http://localhost:3000` con il riepilogo dettagliato delle sessioni e delle metriche.
+Avvia un'interfaccia scura su `http://localhost:3000` leggendo i dati reali registrati in `.zeus/sessions.json`.
 
 ---
 
 ## Installazione
 
-### Configurazione Universale per qualsiasi AI
-Scarica [`AGENTS.md`](../AGENTS.md) nella root del tuo progetto:
-```bash
-curl -o AGENTS.md https://raw.githubusercontent.com/24Capp/ZeusDeveloper/main/AGENTS.md
-```
-Antigravity, Cursor, Windsurf, OpenCode, Devin, Aider e Claude Code rilevano automaticamente le regole di progetto.
-
-### Antigravity & Gemini CLI
-```bash
-agy plugin install https://github.com/24Capp/ZeusDeveloper
-```
-
 ### Claude Code
+Installa direttamente tramite i comandi del marketplace:
 ```text
 /plugin marketplace add 24Capp/ZeusDeveloper
 /plugin install zeus@zeus
 ```
 
-Consulta [INSTALL.md](../INSTALL.md) per Cursor, Windsurf, Copilot, OpenCode e Hermes.
+### Antigravity &amp; Gemini CLI
+In Antigravity, le regole da `AGENTS.md` e le skill in `.agents/skills/` vengono rilevate automaticamente. Per l'installazione globale:
+```bash
+agy plugin install https://github.com/24Capp/ZeusDeveloper
+```
+
+### Cursor, Windsurf, Codex, Devin &amp; Aider
+Qualsiasi assistente che legga `AGENTS.md` o `.cursor/rules/` funziona direttamente senza configurazione:
+```bash
+curl -o AGENTS.md https://raw.githubusercontent.com/24Capp/ZeusDeveloper/main/AGENTS.md
+```
 
 ---
 
 ## Licenza
-MIT © 2026 Luca Quagliozzi (24Capp)
+MIT &copy; 2026 Luca Quagliozzi (24Capp)

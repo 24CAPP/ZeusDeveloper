@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "zeus",
+  "description": "ZeusDeveloper sovereign engineering mode for Claude Code.",
+  "owner": {
+    "name": "Luca Quagliozzi",
+    "url": "https://github.com/24Capp"
+  },
+  "plugins": [
+    {
+      "name": "zeus",
+      "description": "Minimal diffs, stdlib first, Cloud-grade security boundaries, and high-density technical responses.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
