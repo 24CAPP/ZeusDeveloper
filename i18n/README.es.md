@@ -26,7 +26,7 @@
 ## Resultados de Benchmark
 
 <p align="center">
-  <img src="../assets/chart-overview.svg?raw=true" width="880" alt="Resumen de Benchmark de ZeusDeveloper">
+  <img src="../assets/chart-overview.png" width="880" alt="Resumen de Benchmark de ZeusDeveloper">
 </p>
 
 ### Entendiendo los Números
@@ -40,7 +40,7 @@ Este benchmark se realizó en 40 tareas reales de ingeniería en cuatro entornos
 ---
 
 <p align="center">
-  <img src="../assets/chart-tests.svg?raw=true" width="880" alt="Confiabilidad y Pruebas de ZeusDeveloper">
+  <img src="../assets/chart-tests.png" width="880" alt="Confiabilidad y Pruebas de ZeusDeveloper">
 </p>
 
 ### Estándares de Seguridad y Verificación
@@ -53,7 +53,7 @@ Escribir menos código solo es útil si la solución es correcta y segura. ZeusD
 ---
 
 <p align="center">
-  <img src="../assets/chart-tiers.svg?raw=true" width="880" alt="Ahorro de Tokens por Nivel Operativo">
+  <img src="../assets/chart-tiers.png" width="880" alt="Ahorro de Tokens por Nivel Operativo">
 </p>
 
 ### Niveles Operativos
@@ -73,7 +73,7 @@ ZeusDeveloper ofrece cuatro niveles de intensidad según el tipo de tarea:
 ## Caso de Estudio: Antes y Después
 
 <p align="center">
-  <img src="../assets/chart-before-after.svg?raw=true" width="880" alt="Caso de estudio Antes y Después">
+  <img src="../assets/chart-before-after.png" width="880" alt="Caso de estudio Antes y Después">
 </p>
 
 ### El Problema: Añadir Rate Limiting a una Ruta API

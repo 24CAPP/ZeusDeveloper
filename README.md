@@ -26,7 +26,7 @@
 ## Benchmark Results
 
 <p align="center">
-  <img src="assets/chart-overview.svg?raw=true" width="880" alt="ZeusDeveloper Benchmark Overview">
+  <img src="assets/chart-overview.png" width="880" alt="ZeusDeveloper Benchmark Overview">
 </p>
 
 ### Understanding the Numbers
@@ -40,7 +40,7 @@ This benchmark was conducted across 40 real-world engineering tasks in four prod
 ---
 
 <p align="center">
-  <img src="assets/chart-tests.svg?raw=true" width="880" alt="ZeusDeveloper Reliability and Tests">
+  <img src="assets/chart-tests.png" width="880" alt="ZeusDeveloper Reliability and Tests">
 </p>
 
 ### Verification &amp; Security Standards
@@ -53,7 +53,7 @@ Writing less code is only valuable if the result is correct and secure. ZeusDeve
 ---
 
 <p align="center">
-  <img src="assets/chart-tiers.svg?raw=true" width="880" alt="ZeusDeveloper Token Savings by Tier">
+  <img src="assets/chart-tiers.png" width="880" alt="ZeusDeveloper Token Savings by Tier">
 </p>
 
 ### Operating Tiers: Adaptable Intensity
@@ -73,7 +73,7 @@ Different tasks require different levels of interaction. ZeusDeveloper provides 
 ## Case Study: Before &amp; After
 
 <p align="center">
-  <img src="assets/chart-before-after.svg?raw=true" width="880" alt="Before and After case study">
+  <img src="assets/chart-before-after.png" width="880" alt="Before and After case study">
 </p>
 
 ### The Problem: Adding Rate Limiting to an API Route

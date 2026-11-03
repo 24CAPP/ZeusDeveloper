@@ -26,7 +26,7 @@
 ## 基准测试结果
 
 <p align="center">
-  <img src="../assets/chart-overview.svg?raw=true" width="880" alt="ZeusDeveloper 基准测试总览">
+  <img src="../assets/chart-overview.png" width="880" alt="ZeusDeveloper 基准测试总览">
 </p>
 
 ### 数据解读与测试方法
@@ -40,7 +40,7 @@
 ---
 
 <p align="center">
-  <img src="../assets/chart-tests.svg?raw=true" width="880" alt="ZeusDeveloper 可靠性与测试">
+  <img src="../assets/chart-tests.png" width="880" alt="ZeusDeveloper 可靠性与测试">
 </p>
 
 ### 可靠性验证与安全防护标准
@@ -53,7 +53,7 @@
 ---
 
 <p align="center">
-  <img src="../assets/chart-tiers.svg?raw=true" width="880" alt="各运行级别的 Token 节省对比">
+  <img src="../assets/chart-tiers.png" width="880" alt="各运行级别的 Token 节省对比">
 </p>
 
 ### 运行模式级别
@@ -73,7 +73,7 @@ ZeusDeveloper 提供四个可随时切换的运行级别：
 ## 案例对比：优化前与优化后
 
 <p align="center">
-  <img src="../assets/chart-before-after.svg?raw=true" width="880" alt="案例对比">
+  <img src="../assets/chart-before-after.png" width="880" alt="案例对比">
 </p>
 
 ### 实际案例：为敏感接口增加滑动窗口限流

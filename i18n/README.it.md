@@ -26,7 +26,7 @@
 ## Risultati dei Benchmark
 
 <p align="center">
-  <img src="../assets/chart-overview.svg?raw=true" width="880" alt="Panoramica Benchmark ZeusDeveloper">
+  <img src="../assets/chart-overview.png" width="880" alt="Panoramica Benchmark ZeusDeveloper">
 </p>
 
 ### I Numeri nel Dettaglio
@@ -40,7 +40,7 @@ Questo benchmark è stato condotto su 40 compiti ingegneristici reali in quattro
 ---
 
 <p align="center">
-  <img src="../assets/chart-tests.svg?raw=true" width="880" alt="Affidabilità e Test ZeusDeveloper">
+  <img src="../assets/chart-tests.png" width="880" alt="Affidabilità e Test ZeusDeveloper">
 </p>
 
 ### Standard di Sicurezza &amp; Verifica
@@ -53,7 +53,7 @@ Scrivere meno codice ha valore solo se il risultato finale è corretto e sicuro.
 ---
 
 <p align="center">
-  <img src="../assets/chart-tiers.svg?raw=true" width="880" alt="Risparmio Token per Livello Operativo">
+  <img src="../assets/chart-tiers.png" width="880" alt="Risparmio Token per Livello Operativo">
 </p>
 
 ### Livelli Operativi ad Intensità Regolabile
@@ -73,7 +73,7 @@ Compiti diversi richiedono livelli di interazione diversi. ZeusDeveloper mette a
 ## Caso di Studio: Prima e Dopo
 
 <p align="center">
-  <img src="../assets/chart-before-after.svg?raw=true" width="880" alt="Caso di studio Prima e Dopo">
+  <img src="../assets/chart-before-after.png" width="880" alt="Caso di studio Prima e Dopo">
 </p>
 
 ### Il Problema: Aggiungere un Rate Limiter a una rotta API
