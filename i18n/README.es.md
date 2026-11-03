@@ -101,6 +101,27 @@ export function rateLimit(key: string, limit = 10, windowMs = 60_000): boolean {
 
 ---
 
+## Comandos Rápidos (Slash Commands)
+
+En entornos de desarrollo que soportan la ejecución nativa de skills (Claude Code, Antigravity, Codex CLI, Cursor, Windsurf, OpenCode, Devin), ZeusDeveloper ofrece un conjunto completo de comandos:
+
+| Comando | Sintaxis | Propósito Real |
+| :--- | :--- | :--- |
+| `/zeus` | `[hermes \| zeus \| titan \| oracle]` | Cambia el nivel operativo o consulta el modo activo. Por defecto opera en modo `zeus` (diffs mínimos, validación estricta de límites). |
+| `/zeus-shield` | `[staged \| branch \| diff]` | Auditoría de seguridad Aegis en 7 vectores de ataque (Inyecciones, Auth, IDOR, SSRF, carreras TOCTOU, fugas de prompts IA, límites de memoria). Localiza vulnerabilidades concretas con parches de una línea. |
+| `/zeus-strike` | `[path \| scope]` | Refactorización quirúrgica contra el código inflado. Elimina capas innecesarias, clases vacías y sustituye dependencias pesadas por la biblioteca estándar nativa. |
+| `/zeus-audit` | *(sin argumentos)* | Inspección profunda de todo el repositorio con criterio de principal engineer: detecta problemas de concurrencia, errores silenciados, fugas de memoria y ausencia de tests. |
+| `/zeus-verify` | `[función \| módulo]` | Genera pruebas unitarias deterministas en condiciones límite: prueba entradas maliciosas, valores nulos, colecciones vacías, ceros y fallos de red. |
+| `/zeus-debt` | `[filtro]` | Recopila todos los comentarios `// zeus-debt:` y `TODO:` en un registro de deuda técnica priorizado con condiciones de refactorización claras. |
+| `/zeus-help` | *(sin argumentos)* | Guía de referencia rápida con la doctrina Lightning, niveles operativos y sintaxis de comandos. |
+
+### Entornos Compatibles y Disparadores
+* **Claude Code y Antigravity**: Ejecuta directamente en el chat con una barra inclinada (`/zeus titan`, `/zeus-shield`).
+* **Codex CLI**: Los comandos usan el prefijo del plugin: `$zeus:zeus-shield` o `/zeus`.
+* **Cursor, Windsurf y Cline**: En entornos basados puramente en reglas, basta con solicitar la acción en lenguaje natural (ej. *"ejecuta zeus-shield en mis cambios locales"* o *"refactoriza con zeus-strike"*). El modelo aplica de inmediato las directivas de `AGENTS.md`.
+
+---
+
 ## Panel de Monitoreo Local
 
 Inicia el panel interactivo en tu navegador:
@@ -130,6 +151,25 @@ agy plugin install https://github.com/24Capp/ZeusDeveloper
 ```bash
 curl -o AGENTS.md https://raw.githubusercontent.com/24Capp/ZeusDeveloper/main/AGENTS.md
 ```
+
+---
+
+## Preguntas Frecuentes (FAQ)
+
+**¿Requiere ZeusDeveloper un demonio en segundo plano o archivos de configuración?**  
+No. No hay servicios en segundo plano ni configuraciones obligatorias. ZeusDeveloper opera puramente como instrucciones de ingeniería y scripts ligeros. Si deseas fijar un nivel predeterminado permanente sin modificar los archivos del proyecto, puedes definir `ZEUS_DEFAULT_TIER=titan` en las variables de entorno de tu terminal.
+
+**¿Por qué insiste en generar comentarios `// zeus-debt:`?**  
+Todo desarrollador toma atajos pragmáticos ante fechas de entrega críticas. El problema no es tomar el atajo; el problema es olvidar *por qué* se tomó y *cuándo* debe refactorizarse. Zeus marca los atajos intencionados con una causa clara y un detonante medible (`// zeus-debt: mapa en memoria en lugar de redis; refactorizar al superar 1 réplica`). El comando `/zeus-debt` los reúne en un registro visible para que las soluciones temporales no se conviertan en pasivos eternos.
+
+**¿Qué ocurre si realmente necesito una abstracción de 150 líneas o una librería externa?**  
+Si tu caso de uso exige genuinamente un cluster Redis distribuido, autenticación compleja multi-inquilino o análisis AST que la biblioteca estándar no pueda cubrir limpiamente, Zeus lo construirá. En modo **Titan**, cuestionará primero si tu carga actual realmente justifica esa sobrecarga. Si lo confirmas, Zeus implementará la solución con defensas estrictas y pruebas completas, registrando el coste de mantenimiento.
+
+**¿Puede el código de la biblioteca estándar soportar cargas de producción elevadas?**  
+Los entornos modernos (Node 20+, Python 3.12+, Go, navegadores actuales) incluyen primitivas de alto rendimiento: I/O por streams, generadores criptográficos seguros, fetch nativo y concurrencia estructurada. Añadir paquetes de 500 KB con decenas de dependencias transitivas solo para recortar un string o limitar peticiones introduce vectores de ataque innecesarios. El código que no instalas tiene cero vulnerabilidades y escala infinitamente.
+
+**¿Por qué el nombre "Zeus"?**  
+La mayoría de asistentes de IA generan disculpas continuas, preámbulos innecesarios y 200 líneas de código superfluo para un cambio de 5 líneas. Zeus personifica la ingeniería soberana: impacto directo como un rayo, diffs mínimos y protección absoluta de los límites de seguridad.
 
 ---
 

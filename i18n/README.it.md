@@ -114,15 +114,24 @@ export function rateLimit(key: string, limit = 10, windowMs = 60_000): boolean {
 
 ---
 
-## Suite di Skill Incluse
+## Comandi Rapidi (Slash Commands)
 
-* **`/zeus`**: Modalità principale e commutazione dei livelli operativi.
-* **`/zeus-shield`**: Revisione di sicurezza su 7 classi di attacco (Injection, IDOR, TOCTOU, Crypto, vettori AI, limiti di risorse, supply chain).
-* **`/zeus-strike`**: Refactoring chirurgico per rimuovere dead code, wrapper inutili e pacchetti ridondanti.
-* **`/zeus-audit`**: Audit del repository per individuare race condition, colli di bottiglia e complessità accidentale.
-* **`/zeus-verify`**: Generazione di test unitari deterministici sugli edge case per logiche critiche.
-* **`/zeus-debt`**: Scansione del codice per tag `// zeus-debt:` e `TODO:` per generare un registro dei debiti tecnici.
-* **`/zeus-help`**: Guida rapida ai comandi.
+Negli ambienti di sviluppo che supportano l'esecuzione nativa delle skill (Claude Code, Antigravity, Codex CLI, Cursor, Windsurf, OpenCode, Devin), ZeusDeveloper mette a disposizione una suite di comandi dedicati:
+
+| Comando | Sintassi | Cosa fa in concreto |
+| :--- | :--- | :--- |
+| `/zeus` | `[hermes \| zeus \| titan \| oracle]` | Modifica il livello operativo o mostra la configurazione attiva. Di default opera in modalità `zeus` (diff minimi, difese rigorose dei confini). |
+| `/zeus-shield` | `[staged \| branch \| diff]` | Audit di sicurezza Aegis su 7 vettori di attacco (Injection, Auth, IDOR, SSRF, race condition TOCTOU, prompt leak AI, limiti di risorse). Isola la vulnerabilità e fornisce la fix minimale. |
+| `/zeus-strike` | `[path \| scope]` | Refactoring chirurgico anti-bloat. Elimina wrapper superflui, appiattisce astrazioni inutili e rimpiazza dipendenze pesanti con le funzioni native della standard library. |
+| `/zeus-audit` | *(senza argomenti)* | Ispezione approfondita dell'intero repository dal punto di vista di un principal engineer: scova problemi di concorrenza, gestione superficiale degli errori, perdite di memoria e test mancanti. |
+| `/zeus-verify` | `[funzione \| file]` | Genera test unitari deterministici sugli edge case per logiche critiche: testa input malevoli, valori nulli, array vuoti, parametri a zero e timeout di rete. |
+| `/zeus-debt` | `[filtro]` | Raccoglie tutti i commenti `// zeus-debt:` e `TODO:` sparsi nel codice e compila un registro del debito tecnico ordinato per priorità, con condizioni chiare di refactoring. |
+| `/zeus-help` | *(senza argomenti)* | Guida rapida interattiva che riassume la Lightning Doctrine, i livelli operativi e la sintassi dei comandi. |
+
+### Ambienti di Esecuzione e Sintassi
+* **Claude Code e Antigravity**: Digita il comando direttamente nel prompt con lo slash (`/zeus titan`, `/zeus-shield`).
+* **Codex CLI**: I comandi usano il prefisso del plugin: `$zeus:zeus-shield` oppure `/zeus`.
+* **Cursor, Windsurf e Cline**: Negli assistenti basati esclusivamente sulle regole del workspace, basta esprimere la richiesta in linguaggio naturale nella chat (es. *"esegui zeus-shield sulle ultime modifiche"* o *"snellisci questo file con zeus-strike"*). L'assistente applicherà esattamente le medesime direttive lette da `AGENTS.md`.
 
 ---
 
@@ -158,6 +167,25 @@ Qualsiasi assistente che legga `AGENTS.md` o `.cursor/rules/` funziona direttame
 ```bash
 curl -o AGENTS.md https://raw.githubusercontent.com/24Capp/ZeusDeveloper/main/AGENTS.md
 ```
+
+---
+
+## Domande Frequenti (FAQ)
+
+**ZeusDeveloper richiede un processo in background o file di configurazione complessi?**  
+No. Nessun demone, nessun processo in background e nessun file di configurazione obbligatorio. ZeusDeveloper è composto da regole ingegneristiche dirette e script leggeri. Se desideri impostare un livello operativo predefinito per tutte le sessioni senza toccare i file del workspace, puoi esportare `ZEUS_DEFAULT_TIER=titan` nel tuo terminale, ma l'installazione di base funziona all'istante con zero setup.
+
+**Perché ZeusDeveloper insiste nell'usare il commento `// zeus-debt:`?**  
+Qualsiasi sviluppatore professionista è costretto a prendere scorciatoie quando le scadenze incombono. Il problema non è prendere una scorciatoia pragmatica; il vero problema è dimenticare *perché* è stata presa e *quando* andrà sistemata. Zeus impone di annotare la motivazione e la condizione scatenante del refactoring (`// zeus-debt: mappa in memoria invece di redis; rifattorizzare quando il numero di repliche > 1`). Il comando `/zeus-debt` raccoglie questi debiti in un registro chiaro, evitando che una soluzione temporanea diventi un debito eterno.
+
+**Cosa succede se ho davvero bisogno di un'astrazione complessa o di un pacchetto esterno?**  
+Se la tua applicazione ha reale bisogno di un cluster Redis distribuito, di autenticazione multi-tenant complessa o di un parser AST dedicato che la libreria standard non può gestire in poche righe, Zeus la realizzerà. In modalità **Titan**, ti chiederà prima conferma se il tuo carico di lavoro attuale giustifica davvero quella complessità. Se confermi la necessità, Zeus costruirà la soluzione in modo impeccabile: confini blindati, gestione degli errori rigorosa e test completi, annotando il trade-off architetturale.
+
+**Il codice basato sulla standard library regge davvero carichi di produzione elevati?**  
+I runtime moderni (Node 20+, Python 3.12+, Go, browser attuali) offrono già tutto il necessario: streaming I/O, generatori crittografici sicuri, timer ad alta risoluzione, fetch nativa e concorrenza strutturata. Installare pacchetti npm o librerie esterne da centinaia di kilobyte con dozzine di sotto-dipendenze solo per validare un formato o applicare un rate limit introduce vettori di attacco e manutenzione inutile. Il codice che non scrivi e non installi ha zero falle di sicurezza, zero tempi di build e scala all'infinito.
+
+**Perché il nome "Zeus"?**  
+La maggior parte degli assistenti AI produce scuse continue, convenevoli vuoti e 200 righe di boilerplate per una correzione che ne richiedeva 5. Zeus rappresenta la disciplina ingegneristica sovrana: saette rapide e chirurgiche sul problema, diff minimi e sicurezza senza compromessi.
 
 ---
 

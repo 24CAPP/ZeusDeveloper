@@ -114,15 +114,24 @@ export function rateLimit(key: string, limit = 10, windowMs = 60_000): boolean {
 
 ---
 
-## Included Skills
+## Slash Commands
 
-* **`/zeus`**: Main mode and tier switching.
-* **`/zeus-shield`**: Security review across 7 attack classes (Injection, IDOR, TOCTOU, Crypto, AI vectors, Resource limits, Supply chain).
-* **`/zeus-strike`**: Surgical refactoring to remove dead code, unnecessary wrappers, and redundant packages.
-* **`/zeus-audit`**: Codebase audit for concurrency bugs, performance bottlenecks, and architectural bloat.
-* **`/zeus-verify`**: Generates deterministic unit and boundary tests for critical logic.
-* **`/zeus-debt`**: Scans for `// zeus-debt:` and `TODO:` tags to compile a debt ledger.
-* **`/zeus-help`**: Quick reference guide.
+ZeusDeveloper provides a dedicated suite of slash commands for agent environments that support native skill execution (Claude Code, Antigravity, Codex CLI, Cursor, Windsurf, OpenCode, Devin):
+
+| Command | Signature | What it does |
+| :--- | :--- | :--- |
+| `/zeus` | `[hermes \| zeus \| titan \| oracle]` | Switch operating tiers or display active configuration. Runs in `zeus` mode by default (minimal diffs, hardened trust boundaries). |
+| `/zeus-shield` | `[staged \| branch \| diff]` | Aegis-grade security audit across 7 threat classes (Injection, Auth, IDOR, SSRF, TOCTOU races, AI prompt leaks, resource limits). Pinpoints exact vulnerabilities and yields one-line fixes. |
+| `/zeus-strike` | `[path \| scope]` | Surgical anti-bloat refactor. Deletes dead wrappers, collapses redundant abstraction layers, and swaps bloated third-party dependencies for native standard library implementations. |
+| `/zeus-audit` | *(no args)* | Whole-repository inspection from a principal engineer's perspective: flags concurrency hazards, unhandled error paths, memory growth risks, and missing invariant tests. |
+| `/zeus-verify` | `[function \| module]` | Writes deterministic boundary tests for critical logic. Stress-tests adversarial inputs, zero values, empty collections, and network timeout edge cases. |
+| `/zeus-debt` | `[filter]` | Scans the codebase for `// zeus-debt:` and `TODO:` markers, assembling them into a prioritized technical debt ledger with explicit refactoring triggers. |
+| `/zeus-help` | *(no args)* | Interactive reference guide detailing the Lightning Doctrine, operating tiers, and command syntax. |
+
+### Host Environments & Command Triggers
+* **Claude Code & Antigravity**: Invoke directly in the prompt with a leading slash (`/zeus titan`, `/zeus-shield`).
+* **Codex CLI**: Commands are namespaced under the plugin prefix: `$zeus:zeus-shield` or `/zeus`.
+* **Cursor, Windsurf & Cline**: In pure rule-based setups without slash-command plugins, simply type your request naturally in the chat prompt (e.g. *"run zeus-shield on recent commits"* or *"refactor this with zeus-strike"*). The agent recognizes the directive from `AGENTS.md` and applies the exact same discipline.
 
 ---
 
@@ -158,6 +167,25 @@ Any assistant that reads `AGENTS.md` or `.cursor/rules/` works out of the box wi
 ```bash
 curl -o AGENTS.md https://raw.githubusercontent.com/24Capp/ZeusDeveloper/main/AGENTS.md
 ```
+
+---
+
+## Frequently Asked Questions
+
+**Does ZeusDeveloper need a background daemon or config file?**  
+No. There are no daemons, background watchers, or required configuration files. ZeusDeveloper lives as pure engineering instructions and lightweight scripts. If you want a persistent tier across all sessions without editing workspace rules, you can optionally set `ZEUS_DEFAULT_TIER=titan` (or `oracle`, `hermes`) in your shell environment, but zero setup is strictly necessary.
+
+**Why does ZeusDeveloper insist on writing `// zeus-debt:` comments?**  
+Every working engineer makes deliberate trade-offs under deadlines. The problem isn't making a pragmatic shortcut; the problem is forgetting *why* it was made and *when* it must be refactored. Zeus tags deliberate shortcuts with an explicit rationale and a measurable refactoring trigger (for example: `// zeus-debt: in-memory map instead of redis cluster; refactor when replica count exceeds 1`). Running `/zeus-debt` collects these into a clear backlog so temporary solutions don't quietly become permanent liabilities.
+
+**What if I actually need a 150-line abstraction or a third-party package?**  
+If your architecture truly requires distributed Redis pub/sub, multi-region auth, or complex AST parsing that the standard library cannot reasonably do in a dozen lines, Zeus will build it. In **Titan** mode, it will first question whether your workload actually needs that complexity today. If you confirm that it does, Zeus implements it cleanly—with strict boundary validation, error handling, and unit tests, while noting the operational trade-off.
+
+**Can standard library implementations really hold up under production loads?**  
+Modern runtimes (Node 20+, Python 3.12+, Go, modern browsers) already include production-grade primitives: streaming I/O, cryptographic random generators, high-resolution timers, native fetch, and structured concurrency. Installing a 500KB npm package with 20 transitive dependencies just to clamp a number or rate-limit an IP address introduces security attack vectors and dependency drift. Code you don't install has zero vulnerabilities, zero build overhead, and scales infinitely.
+
+**Why the name "Zeus"?**  
+Most AI coders bury you in apologetic preamble, conversational filler, and over-engineered boilerplate. Zeus represents sovereign engineering: striking directly at the problem with surgical precision, minimal diffs, and uncompromising trust boundaries.
 
 ---
 
