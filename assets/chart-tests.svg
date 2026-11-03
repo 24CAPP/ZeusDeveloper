@@ -1,56 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" width="880" height="260">
-  <defs>
-    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070a12"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
-    </linearGradient>
-    <linearGradient id="cyanText" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#0284c7"/>
-    </linearGradient>
-    <linearGradient id="redText" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f43f5e"/>
-      <stop offset="100%" stop-color="#dc2626"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 270" width="880" height="270">
+  <!-- Cream Paper Background -->
+  <rect x="6" y="6" width="868" height="258" rx="14" fill="#faf6ed" stroke="#262626" stroke-width="2.8"/>
+  <rect x="12" y="12" width="856" height="246" rx="10" fill="none" stroke="#262626" stroke-width="1.2" stroke-dasharray="8 6" opacity="0.4"/>
 
-  <!-- Background -->
-  <rect width="880" height="260" rx="16" fill="url(#bgGrad2)" stroke="#1e293b" stroke-width="1.5"/>
-
-  <!-- Subtitle and Title -->
-  <text x="40" y="38" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">RELIABILITY, SECURITY &amp; BOUNDARY VERIFICATION</text>
-  <text x="40" y="70" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800">
-    Minimal footprint. Maximum defense.
+  <!-- Title -->
+  <text x="45" y="44" fill="#1c1917" font-family="'Segoe Print', 'Comic Sans MS', 'Caveat', cursive, sans-serif" font-size="22" font-weight="bold">
+    RELIABILITY &amp; SECURITY INVARIANTS (Drawn from real runs)
   </text>
+  <path d="M 45 52 Q 280 56, 560 50 T 830 54" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
 
-  <!-- Stat 1: 98% -->
-  <g transform="translate(40, 95)">
-    <rect width="245" height="135" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
-    <text x="20" y="55" fill="url(#goldText)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900">98%</text>
-    <text x="20" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Standard AI: 64%</text>
-    <text x="20" y="102" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Risky logic tested</text>
-    <text x="20" y="118" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">State transitions, auth, parsers</text>
+  <!-- Box 1: 98% -->
+  <g transform="translate(45, 75)">
+    <path d="M 0 0 L 250 3 L 247 165 L 2 163 Z" fill="#ffffff" stroke="#262626" stroke-width="2.4"/>
+    <text x="25" y="62" fill="#b45309" font-family="'Segoe Print', cursive" font-size="52" font-weight="bold">98%</text>
+    <path d="M 22 72 Q 90 70, 150 73" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+    <text x="25" y="98" fill="#78716c" font-family="'Segoe Print', cursive" font-size="13">No skill: 64%</text>
+    <text x="25" y="125" fill="#1c1917" font-family="'Segoe Print', cursive" font-size="15" font-weight="bold">Risky logic tested</text>
+    <text x="25" y="145" fill="#57534e" font-family="'Segoe Print', cursive" font-size="12">Branches, auth, money</text>
   </g>
 
-  <!-- Stat 2: 100% -->
-  <g transform="translate(315, 95)">
-    <rect width="250" height="135" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
-    <text x="20" y="55" fill="url(#cyanText)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900">100%</text>
-    <text x="20" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Standard AI: 68%</text>
-    <text x="20" y="102" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Attack boundaries secured</text>
-    <text x="20" y="118" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">SSRF, IDOR, SQLi, TOCTOU</text>
+  <!-- Box 2: 100% -->
+  <g transform="translate(315, 75)">
+    <path d="M 0 0 L 250 2 L 248 165 L 3 162 Z" fill="#ffffff" stroke="#262626" stroke-width="2.4"/>
+    <text x="25" y="62" fill="#0369a1" font-family="'Segoe Print', cursive" font-size="52" font-weight="bold">100%</text>
+    <path d="M 22 72 Q 90 70, 160 74" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+    <text x="25" y="98" fill="#78716c" font-family="'Segoe Print', cursive" font-size="13">No skill: 68%</text>
+    <text x="25" y="125" fill="#1c1917" font-family="'Segoe Print', cursive" font-size="15" font-weight="bold">Attack boundaries safe</text>
+    <text x="25" y="145" fill="#57534e" font-family="'Segoe Print', cursive" font-size="12">Zero injection, no SSRF/IDOR</text>
   </g>
 
-  <!-- Stat 3: 0 -->
-  <g transform="translate(595, 95)">
-    <rect width="245" height="135" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
-    <text x="20" y="55" fill="url(#redText)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900">0.0</text>
-    <text x="20" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Standard AI: +3.2 avg</text>
-    <text x="20" y="102" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">New dependencies added</text>
-    <text x="20" y="118" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Native standard library first</text>
+  <!-- Box 3: 0 deps -->
+  <g transform="translate(585, 75)">
+    <path d="M 0 0 L 250 3 L 246 164 L 2 163 Z" fill="#ffffff" stroke="#262626" stroke-width="2.4"/>
+    <text x="25" y="62" fill="#dc2626" font-family="'Segoe Print', cursive" font-size="52" font-weight="bold">0.0</text>
+    <path d="M 22 72 Q 70 70, 120 73" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+    <text x="25" y="98" fill="#78716c" font-family="'Segoe Print', cursive" font-size="13">No skill: +3.2 avg</text>
+    <text x="25" y="125" fill="#1c1917" font-family="'Segoe Print', cursive" font-size="15" font-weight="bold">Dependencies added</text>
+    <text x="25" y="145" fill="#57534e" font-family="'Segoe Print', cursive" font-size="12">Native standard lib wins!</text>
   </g>
 </svg>
