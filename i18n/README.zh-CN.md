@@ -176,3 +176,15 @@ curl -o AGENTS.md https://raw.githubusercontent.com/24Capp/ZeusDeveloper/main/AG
 
 ## 许可证
 MIT &copy; 2026 Luca Quagliozzi (24Capp)
+
+---
+
+<p align="center">
+  <img src="../assets/crafted-in-europe.png" width="880" alt="在意大利与欧盟设计与构建">
+</p>
+
+<p align="center">
+  <strong>在意大利与欧盟设计与构建 &bull; European Union</strong><br>
+  <em>零冗余，纯粋工程。作者：<strong>Luca Quagliozzi (24Capp)</strong>。</em>
+</p>
+

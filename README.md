@@ -191,3 +191,15 @@ Most AI coders bury you in apologetic preamble, conversational filler, and over-
 
 ## License
 MIT &copy; 2026 Luca Quagliozzi (24Capp)
+
+---
+
+<p align="center">
+  <img src="assets/crafted-in-europe.png" width="880" alt="Designed and coded in Italy • European Union">
+</p>
+
+<p align="center">
+  <strong>Designed and coded in Italy &bull; European Union</strong><br>
+  <em>Zero bloat, pure engineering. Authored by <strong>Luca Quagliozzi (24Capp)</strong>.</em>
+</p>
+

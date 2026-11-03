@@ -191,3 +191,15 @@ La maggior parte degli assistenti AI produce scuse continue, convenevoli vuoti e
 
 ## Licenza
 MIT &copy; 2026 Luca Quagliozzi (24Capp)
+
+---
+
+<p align="center">
+  <img src="../assets/crafted-in-europe.png" width="880" alt="Progettato e scritto in Italia • Unione Europea">
+</p>
+
+<p align="center">
+  <strong>Progettato e scritto in Italia &bull; Unione Europea</strong><br>
+  <em>Zero bloat, pura ingegneria. Creato da <strong>Luca Quagliozzi (24Capp)</strong>.</em>
+</p>
+

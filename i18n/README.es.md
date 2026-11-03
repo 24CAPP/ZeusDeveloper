@@ -175,3 +175,15 @@ La mayoría de asistentes de IA generan disculpas continuas, preámbulos inneces
 
 ## Licencia
 MIT &copy; 2026 Luca Quagliozzi (24Capp)
+
+---
+
+<p align="center">
+  <img src="../assets/crafted-in-europe.png" width="880" alt="Diseñado y desarrollado en Italia • Unión Europea">
+</p>
+
+<p align="center">
+  <strong>Diseñado y desarrollado en Italia &bull; Unión Europea</strong><br>
+  <em>Cero bloat, pura ingeniería. Creado por <strong>Luca Quagliozzi (24Capp)</strong>.</em>
+</p>
+
