@@ -26,15 +26,15 @@
 ## Resultados de Benchmark
 
 <p align="center">
-  <img src="../assets/chart-overview.svg" width="880" alt="Resumen de Benchmark de ZeusDeveloper">
+  <img src="../assets/chart-overview.svg?raw=true" width="880" alt="Resumen de Benchmark de ZeusDeveloper">
 </p>
 
 <p align="center">
-  <img src="../assets/chart-tests.svg" width="880" alt="Confiabilidad y Pruebas de ZeusDeveloper">
+  <img src="../assets/chart-tests.svg?raw=true" width="880" alt="Confiabilidad y Pruebas de ZeusDeveloper">
 </p>
 
 <p align="center">
-  <img src="../assets/chart-tiers.svg" width="880" alt="Ahorro de Tokens por Nivel Operativo">
+  <img src="../assets/chart-tiers.svg?raw=true" width="880" alt="Ahorro de Tokens por Nivel Operativo">
 </p>
 
 ---
@@ -42,7 +42,7 @@
 ## Caso de Estudio: Antes y Después
 
 <p align="center">
-  <img src="../assets/chart-before-after.svg" width="880" alt="Caso de estudio Antes y Después">
+  <img src="../assets/chart-before-after.svg?raw=true" width="880" alt="Caso de estudio Antes y Después">
 </p>
 
 Los asistentes de código con IA suelen generar complejidad innecesaria:

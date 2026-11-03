@@ -26,15 +26,15 @@
 ## Benchmark Results
 
 <p align="center">
-  <img src="assets/chart-overview.svg" width="880" alt="ZeusDeveloper Benchmark Overview">
+  <img src="assets/chart-overview.svg?raw=true" width="880" alt="ZeusDeveloper Benchmark Overview">
 </p>
 
 <p align="center">
-  <img src="assets/chart-tests.svg" width="880" alt="ZeusDeveloper Reliability and Tests">
+  <img src="assets/chart-tests.svg?raw=true" width="880" alt="ZeusDeveloper Reliability and Tests">
 </p>
 
 <p align="center">
-  <img src="assets/chart-tiers.svg" width="880" alt="ZeusDeveloper Token Savings by Tier">
+  <img src="assets/chart-tiers.svg?raw=true" width="880" alt="ZeusDeveloper Token Savings by Tier">
 </p>
 
 ---
@@ -42,7 +42,7 @@
 ## Case Study: Before &amp; After
 
 <p align="center">
-  <img src="assets/chart-before-after.svg" width="880" alt="Before and After case study">
+  <img src="assets/chart-before-after.svg?raw=true" width="880" alt="Before and After case study">
 </p>
 
 AI coding assistants tend to write too much ceremony:

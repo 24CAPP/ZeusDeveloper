@@ -26,15 +26,15 @@
 ## 基准测试结果
 
 <p align="center">
-  <img src="../assets/chart-overview.svg" width="880" alt="ZeusDeveloper 基准测试总览">
+  <img src="../assets/chart-overview.svg?raw=true" width="880" alt="ZeusDeveloper 基准测试总览">
 </p>
 
 <p align="center">
-  <img src="../assets/chart-tests.svg" width="880" alt="ZeusDeveloper 可靠性与测试">
+  <img src="../assets/chart-tests.svg?raw=true" width="880" alt="ZeusDeveloper 可靠性与测试">
 </p>
 
 <p align="center">
-  <img src="../assets/chart-tiers.svg" width="880" alt="各运行级别的 Token 节省对比">
+  <img src="../assets/chart-tiers.svg?raw=true" width="880" alt="各运行级别的 Token 节省对比">
 </p>
 
 ---
@@ -42,7 +42,7 @@
 ## 案例对比：优化前与优化后
 
 <p align="center">
-  <img src="../assets/chart-before-after.svg" width="880" alt="案例对比">
+  <img src="../assets/chart-before-after.svg?raw=true" width="880" alt="案例对比">
 </p>
 
 主流 AI 编程助手通常容易产生冗余代码：

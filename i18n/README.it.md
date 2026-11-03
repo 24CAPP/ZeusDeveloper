@@ -26,15 +26,15 @@
 ## Risultati dei Benchmark
 
 <p align="center">
-  <img src="../assets/chart-overview.svg" width="880" alt="Panoramica Benchmark ZeusDeveloper">
+  <img src="../assets/chart-overview.svg?raw=true" width="880" alt="Panoramica Benchmark ZeusDeveloper">
 </p>
 
 <p align="center">
-  <img src="../assets/chart-tests.svg" width="880" alt="Affidabilità e Test ZeusDeveloper">
+  <img src="../assets/chart-tests.svg?raw=true" width="880" alt="Affidabilità e Test ZeusDeveloper">
 </p>
 
 <p align="center">
-  <img src="../assets/chart-tiers.svg" width="880" alt="Risparmio Token per Livello Operativo">
+  <img src="../assets/chart-tiers.svg?raw=true" width="880" alt="Risparmio Token per Livello Operativo">
 </p>
 
 ---
@@ -42,7 +42,7 @@
 ## Caso di Studio: Prima e Dopo
 
 <p align="center">
-  <img src="../assets/chart-before-after.svg" width="880" alt="Caso di studio Prima e Dopo">
+  <img src="../assets/chart-before-after.svg?raw=true" width="880" alt="Caso di studio Prima e Dopo">
 </p>
 
 Gli assistenti di programmazione AI tendono a produrre troppo codice superfluo:
