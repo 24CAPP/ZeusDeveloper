@@ -27,6 +27,7 @@
   <path d="M 230 222 L 325 223 L 323 244 L 228 243 Z" fill="#fca5a5" stroke="#dc2626" stroke-width="2.6"/>
   <text x="335" y="239" fill="#dc2626" font-family="'Segoe Print', cursive" font-size="15" font-weight="bold">28 tokens (-78.5% SAVED!)</text>
 
-  <!-- Doodle star -->
-  <text x="730" y="240" fill="#dc2626" font-family="'Segoe Print', cursive" font-size="14" font-weight="bold" transform="rotate(-5 730 240)">★ Ultra-dense</text>
+  <!-- Doodle badge -->
+  <rect x="715" y="222" width="135" height="26" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" transform="rotate(-3 780 235)"/>
+  <text x="725" y="240" fill="#dc2626" font-family="'Segoe Print', cursive" font-size="13" font-weight="bold" transform="rotate(-3 780 235)">Ultra-dense mode</text>
 </svg>
