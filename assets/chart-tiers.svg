@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="tierGradOracle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="880" height="300" rx="16" fill="url(#bgGrad3)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Heading -->
+  <text x="40" y="38" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">VERBAL DISCIPLINE BY OPERATING TIER</text>
+  <text x="40" y="70" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800">
+    Response token consumption per technical prompt
+  </text>
+
+  <!-- Baseline -->
+  <text x="40" y="112" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Standard AI (No Skill)</text>
+  <rect x="230" y="98" width="460" height="20" rx="4" fill="#334155" opacity="0.6"/>
+  <text x="700" y="113" fill="#94a3b8" font-family="monospace" font-size="12">130 tokens &middot; 100%</text>
+
+  <!-- Hermes -->
+  <text x="40" y="156" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">/zeus hermes (Swift)</text>
+  <rect x="230" y="142" width="221" height="20" rx="4" fill="#38bdf8"/>
+  <text x="461" y="157" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">62 tokens &middot; -52%</text>
+
+  <!-- Zeus -->
+  <text x="40" y="200" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">/zeus (Sovereign Default)</text>
+  <rect x="230" y="186" width="161" height="20" rx="4" fill="#f59e0b"/>
+  <text x="401" y="201" fill="#f59e0b" font-family="monospace" font-size="12" font-weight="700">45 tokens &middot; -65%</text>
+
+  <!-- Oracle -->
+  <text x="40" y="244" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">/zeus oracle (High-Density)</text>
+  <rect x="230" y="230" width="101" height="20" rx="4" fill="url(#tierGradOracle)"/>
+  <text x="341" y="245" fill="#f43f5e" font-family="monospace" font-size="12" font-weight="900">28 tokens &middot; -78.5% SAVINGS</text>
+</svg>

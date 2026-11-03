@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="880" height="380">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="goldCyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="45%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="redGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="880" height="380" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Subtitle and Title -->
+  <text x="40" y="44" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">BENCHMARK EVALUATION &middot; 40 PRODUCTION TASKS</text>
+  <text x="40" y="80" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800">
+    Same agent. Same tasks. <tspan fill="#f59e0b">ZeusDeveloper</tspan> <tspan fill="#38bdf8">strikes cleaner.</tspan>
+  </text>
+
+  <!-- Metric 1: Lines of Code -->
+  <text x="40" y="132" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Lines of Code</text>
+  <!-- Baseline bar -->
+  <rect x="220" y="118" width="460" height="18" rx="4" fill="#334155" opacity="0.6"/>
+  <text x="690" y="132" fill="#64748b" font-family="monospace" font-size="12">100%</text>
+  <!-- Zeus bar -->
+  <rect x="220" y="140" width="161" height="18" rx="4" fill="url(#goldCyanGrad)"/>
+  <text x="390" y="154" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">35% &middot; -65% code</text>
+
+  <!-- Metric 2: Output Tokens -->
+  <text x="40" y="196" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Output Tokens</text>
+  <!-- Baseline bar -->
+  <rect x="220" y="182" width="460" height="18" rx="4" fill="#334155" opacity="0.6"/>
+  <text x="690" y="196" fill="#64748b" font-family="monospace" font-size="12">100%</text>
+  <!-- Zeus bar -->
+  <rect x="220" y="204" width="128" height="18" rx="4" fill="url(#goldCyanGrad)"/>
+  <text x="358" y="218" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">28% &middot; -72% tokens</text>
+
+  <!-- Metric 3: Total Cost -->
+  <text x="40" y="260" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">API Cost ($)</text>
+  <!-- Baseline bar -->
+  <rect x="220" y="246" width="460" height="18" rx="4" fill="#334155" opacity="0.6"/>
+  <text x="690" y="260" fill="#64748b" font-family="monospace" font-size="12">100%</text>
+  <!-- Zeus bar -->
+  <rect x="220" y="268" width="230" height="18" rx="4" fill="url(#redGoldGrad)"/>
+  <text x="460" y="282" fill="#f59e0b" font-family="monospace" font-size="12" font-weight="700">50% &middot; -50% cost</text>
+
+  <!-- Metric 4: Turnaround Time -->
+  <text x="40" y="324" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Turnaround Time</text>
+  <!-- Baseline bar -->
+  <rect x="220" y="310" width="460" height="18" rx="4" fill="#334155" opacity="0.6"/>
+  <text x="690" y="324" fill="#64748b" font-family="monospace" font-size="12">100%</text>
+  <!-- Zeus bar -->
+  <rect x="220" y="332" width="207" height="18" rx="4" fill="url(#goldCyanGrad)"/>
+  <text x="437" y="346" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">45% &middot; -55% time</text>
+
+  <!-- Legend -->
+  <rect x="740" y="40" width="10" height="10" rx="2" fill="#334155"/>
+  <text x="756" y="49" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Standard AI</text>
+  <rect x="740" y="58" width="10" height="10" rx="2" fill="url(#goldCyanGrad)"/>
+  <text x="756" y="67" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">ZeusDeveloper</text>
+</svg>

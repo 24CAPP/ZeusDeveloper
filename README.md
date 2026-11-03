@@ -1,38 +1,60 @@
 <p align="center">
-  <img src="assets/Capp_Zeus.png" width="280" alt="ZeusDeveloper Logo">
+  <img src="assets/Capp_Zeus.png" width="260" alt="ZeusDeveloper Logo">
+</p>
+
+<h1 align="center">ZeusDeveloper</h1>
+
+<p align="center">
+  <em>Minimal code. Native runtime first. Cloud-grade security boundaries.</em>
 </p>
 
 <p align="center">
-  <h1 align="center">⚡ ZeusDeveloper</h1>
-  <p align="center">
-    <strong>Minimal, hardened code generation for AI coding agents.</strong>
-  </p>
+  <a href="README.md"><strong>English</strong></a> &middot;
+  <a href="i18n/README.it.md">Italiano</a> &middot;
+  <a href="i18n/README.es.md">Español</a> &middot;
+  <a href="i18n/README.zh-CN.md">简体中文</a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT License">
-  <img src="https://img.shields.io/badge/works%20with-20%2B%20agents-black?style=flat-square" alt="Works with 20+ agents">
-  <img src="https://img.shields.io/badge/code%20reduction--58%25-brightgreen?style=flat-square" alt="-58% Code">
-  <img src="https://img.shields.io/badge/token%20savings--45%25-orange?style=flat-square" alt="-45% Tokens">
-  <img src="https://img.shields.io/badge/security%20defense-Aegis--Grade-success?style=flat-square" alt="Aegis-grade Security">
+  <img src="https://img.shields.io/badge/release-v1.2.0-111827?style=flat-square" alt="Release">
+  <img src="https://img.shields.io/badge/works%20with-20%2B%20agents-111827?style=flat-square" alt="Works with 20+ agents">
+  <img src="https://img.shields.io/badge/license-MIT-111827?style=flat-square" alt="License">
 </p>
 
 ---
 
-## Why this exists
+## Benchmark Results
 
-AI coding assistants often add unnecessary complexity:
-- You ask for a date picker, and they install two npm packages with 300 lines of configuration.
+<p align="center">
+  <img src="assets/chart-overview.svg" width="880" alt="ZeusDeveloper Benchmark Overview">
+</p>
+
+<p align="center">
+  <img src="assets/chart-tests.svg" width="880" alt="ZeusDeveloper Reliability and Tests">
+</p>
+
+<p align="center">
+  <img src="assets/chart-tiers.svg" width="880" alt="ZeusDeveloper Token Savings by Tier">
+</p>
+
+---
+
+## Case Study: Before &amp; After
+
+<p align="center">
+  <img src="assets/chart-before-after.svg" width="880" alt="Before and After case study">
+</p>
+
+AI coding assistants tend to write too much ceremony:
+- You ask for a rate limiter, and they install third-party middleware with multiple configuration files.
 - You ask for a bugfix, and they introduce multiple wrapper classes and interfaces.
 - They spend tokens on greetings, apologies, and conversational filler before showing code.
-
-Some minimalist prompts try to solve this by telling the model to be lazy. That often leads to single-file scripts with missing error handling and skipped input validation.
 
 ZeusDeveloper keeps diffs small while maintaining clean module boundaries, native standard library usage, and strict input checks.
 
 ---
 
-## Core Rules
+## Core Guidelines
 
 1. **Smallest working change**: Solve the requirement with minimal edits to existing code. Avoid speculative parameters, extra config flags, or wrapper utilities nobody asked for.
 2. **Native standard library first**: Use built-in runtime features and existing repository utilities before adding any dependency.
@@ -40,21 +62,6 @@ ZeusDeveloper keeps diffs small while maintaining clean module boundaries, nativ
 4. **Direct answers**: Lead with the concrete change (`[Target] [Action] [Reason]`) and the diff. Cut conversational preamble and pleasantries.
 5. **Clean separation**: Avoid god-functions. Keep domain rules separate from network and I/O logic.
 6. **Invariant checks**: Accompany non-trivial state changes, parsers, or calculations with a focused unit or boundary test.
-
----
-
-## Measured Results
-
-Tested across 40 real-world engineering tasks:
-
-| Metric | Standard Agent Baseline | Passive / Minimal Prompt | **ZeusDeveloper** ⚡ |
-| :--- | :--- | :--- | :--- |
-| **New lines of code** | 100% | 48% | **42%** |
-| **New dependencies added** | +3.2 avg | +0.2 avg | **0.0 (native first)** |
-| **Token spend** | 100% | 72% | **55% (-45%)** |
-| **Conversational filler** | High | Moderate | **None** |
-| **Security checks passed** | 71% | 90% | **100% (Aegis matrix)** |
-| **Code structure** | Fragmented | Single-file script | **Modular functions** |
 
 ---
 
@@ -67,7 +74,7 @@ You can adjust the prompt intensity depending on the task:
 | **Hermes** | `/zeus hermes` | Fast, direct bugfixes with minimal friction. Mentions any deferred debt in one line. |
 | **Zeus** | `/zeus` | Default mode. Enforces minimal diffs, native APIs, and boundary checks. |
 | **Titan** | `/zeus titan` | Questions flawed assumptions or bloated requirements before writing code. |
-| **Oracle** | `/zeus oracle` | High-density responses. Cuts all non-essential prose for maximum token efficiency. |
+| **Oracle** | `/zeus oracle` | High-density responses. Cuts all non-essential prose for maximum token efficiency (-78%). |
 
 ---
 
@@ -80,6 +87,18 @@ You can adjust the prompt intensity depending on the task:
 * **`/zeus-verify`**: Generates deterministic unit and boundary tests for critical logic.
 * **`/zeus-debt`**: Scans for `// zeus-debt:` and `TODO:` tags to compile a debt ledger.
 * **`/zeus-help`**: Quick reference guide.
+
+---
+
+## Local Monitoring Board
+
+ZeusDeveloper includes a standalone dashboard to monitor agent sessions, token savings, and test coverage:
+
+```bash
+python board.py
+```
+
+Opens a local dashboard on `http://localhost:3000` with session breakdowns and metrics.
 
 ---
 

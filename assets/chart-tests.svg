@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" width="880" height="260">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="cyanText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="redText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="880" height="260" rx="16" fill="url(#bgGrad2)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Subtitle and Title -->
+  <text x="40" y="38" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">RELIABILITY, SECURITY &amp; BOUNDARY VERIFICATION</text>
+  <text x="40" y="70" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800">
+    Minimal footprint. Maximum defense.
+  </text>
+
+  <!-- Stat 1: 98% -->
+  <g transform="translate(40, 95)">
+    <rect width="245" height="135" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="55" fill="url(#goldText)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900">98%</text>
+    <text x="20" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Standard AI: 64%</text>
+    <text x="20" y="102" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Risky logic tested</text>
+    <text x="20" y="118" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">State transitions, auth, parsers</text>
+  </g>
+
+  <!-- Stat 2: 100% -->
+  <g transform="translate(315, 95)">
+    <rect width="250" height="135" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="55" fill="url(#cyanText)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900">100%</text>
+    <text x="20" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Standard AI: 68%</text>
+    <text x="20" y="102" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Attack boundaries secured</text>
+    <text x="20" y="118" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">SSRF, IDOR, SQLi, TOCTOU</text>
+  </g>
+
+  <!-- Stat 3: 0 -->
+  <g transform="translate(595, 95)">
+    <rect width="245" height="135" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="55" fill="url(#redText)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900">0.0</text>
+    <text x="20" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Standard AI: +3.2 avg</text>
+    <text x="20" y="102" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">New dependencies added</text>
+    <text x="20" y="118" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Native standard library first</text>
+  </g>
+</svg>
