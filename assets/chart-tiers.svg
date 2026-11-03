@@ -28,5 +28,5 @@
   <text x="335" y="239" fill="#dc2626" font-family="'Segoe Print', cursive" font-size="15" font-weight="bold">28 tokens (-78.5% SAVED!)</text>
 
   <!-- Doodle star -->
-  <text x="730" y="240" fill="#dc2626" font-family="'Segoe Print', cursive" font-size="14" font-weight="bold" transform="rotate(-5 730 240)">&starf; Ultra-dense</text>
+  <text x="730" y="240" fill="#dc2626" font-family="'Segoe Print', cursive" font-size="14" font-weight="bold" transform="rotate(-5 730 240)">★ Ultra-dense</text>
 </svg>
